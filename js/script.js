@@ -47,7 +47,7 @@ function contagemWhile() {
 
 function contagemDo() {
 
-    let numero, contador, mensagem = "CONTAGEM DO DO\n";
+    let numero, contador, mensagem = "CONTAGEM do DO\n";
 
     numero = parseInt(prompt("Contagem até 500, digite um número menor que 500 e eu direi o que é par ou impar:"));
 
@@ -90,32 +90,37 @@ function tabuada() {
 
 function inicioFim() {
 
-    let numero1, numero2, contador, mensagem;
+    let numero1, numero2, contador, mensagem="Contagem\n";
 
     numero1 = parseInt(prompt("Digite um número"));
     numero2 = parseInt(prompt("Digite outro número"))
 
     while (numero1 >= numero2) {
 
-        numero2 = parseInt(prompt("O primeiro número tem que ser menor que o segundo, digite o segundo número novamente"))
+        numero2 = parseInt(prompt("O primeiro número tem que ser menor que o segundo, digite o segundo número novamente"));
     }
 
 
     for (contador = numero1; contador <= numero2; contador++) {
 
         if (contador == numero1) {
-            alert(numero1 + "=" + "INICIO");
+            mensagem+= numero1 + "=" + "INICIO\n";
 
         }
-        else if (contador == numero2) {
-            alert(numero2 + "=" + "FIM");
+        else if (contador== numero2){
+            mensagem+= numero2 + "=" + "FIM\n";
 
         }
-        else {
-        alert(contador);
-        }
+       else{
+        mensagem+= contador + "\n";
+       }
+
     }
 
-    mensagem
+    alert(mensagem);
 }
+
+
+
+
 
