@@ -34,18 +34,18 @@ function contagemWhile() {
         } else {
             mensagem = mensagem + contador + " - ÍMPAR \n";
         }
-    
-        contador = contador+1
+
+        contador = contador + 1
     }
 
 
- alert(mensagem);
+    alert(mensagem);
 
 
 }
 
 
-function contagemDo(){
+function contagemDo() {
 
     let numero, contador, mensagem = "CONTAGEM DO DO\n";
 
@@ -54,39 +54,68 @@ function contagemDo(){
     contador = numero;
 
     do {
-        
+
         if (contador % 2 === 0) {
             mensagem = mensagem + contador + " - PAR \n";
 
         } else {
             mensagem = mensagem + contador + " - ÍMPAR \n";
         }
-    
-        contador = contador+1;
-        
-    } while (contador<=500);
 
-     alert(mensagem); 
+        contador = contador + 1;
+
+    } while (contador <= 500);
+
+    alert(mensagem);
 }
 
 
-    function tabuada(){
+function tabuada() {
 
-        let numero, contador , resposta;
+    let numero, contador, resposta, mensagem = "";
 
-numero = parseInt(prompt("insira um número"));
+    numero = parseInt(prompt("insira um número"));
 
-for (contador= 1;  contador <=10; contador++) {
-  
-
-    resposta= contador*numero;
-
-    alert(numero+ "x" +contador+ "=" +resposta);
-
-
-}
-
-
-
-
+    for (contador = 1; contador <= 10; contador++) {
+        resposta = contador * numero;
+        mensagem += numero + "x" + contador + "=" + resposta + "\n";
     }
+    alert(mensagem);
+
+
+
+
+}
+
+
+function inicioFim() {
+
+    let numero1, numero2, contador, mensagem;
+
+    numero1 = parseInt(prompt("Digite um número"));
+    numero2 = parseInt(prompt("Digite outro número"))
+
+    while (numero1 >= numero2) {
+
+        numero2 = parseInt(prompt("O primeiro número tem que ser menor que o segundo, digite o segundo número novamente"))
+    }
+
+
+    for (contador = numero1; contador <= numero2; contador++) {
+
+        if (contador == numero1) {
+            alert(numero1 + "=" + "INICIO");
+
+        }
+        else if (contador == numero2) {
+            alert(numero2 + "=" + "FIM");
+
+        }
+        else {
+        alert(contador);
+        }
+    }
+
+    mensagem
+}
+
